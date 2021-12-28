@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "bzdownloader"
+version = "0.1.0"
+description = "TUI to download backblaze restore files"
+authors = ["Kyle Lexmond"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.26.0"
+tqdm = "^4.62.3"
+questionary = "^1.10.0"
+humanize = "^3.13.1"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+pyre-check = "^0.9.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
