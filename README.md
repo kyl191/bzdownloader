@@ -8,9 +8,6 @@ See [the wiki](https://github.com/kyl191/bzdownloader/wiki) for more information
 2. Checkout this repo & switch to the directory
 3. Install dependencies with `poetry install`
 
-5. Answer the questions
-6. ~~Profit~~ Have backblaze restore files saved somewhere with less hassle.
-
 ## Use
 1. Run with `poetry run bzdownloader/bzdownloader.py`
 2. Login with your backblaze username & password
