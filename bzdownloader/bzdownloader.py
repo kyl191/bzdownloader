@@ -32,7 +32,7 @@ date_format = "d%Y%m%d_m%H%M%S"
 
 logging.basicConfig()
 log = logging.getLogger(__name__)
-log.setLevel(logging.DEBUG)
+log.setLevel(logging.WARNING)
 
 
 @dataclass
