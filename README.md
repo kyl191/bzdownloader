@@ -10,7 +10,7 @@ See [the wiki](https://github.com/kyl191/bzdownloader/wiki) for more information
 
 ## Use
 1. Run with `poetry run bzdownloader/bzdownloader.py`
-2. Login with your backblaze username & password
+2. Login with your backblaze username & password (Saved for future runs in `bzdownloader_config.ini`, so you should only have to enter this once)
 
 ![login prompt](https://user-images.githubusercontent.com/499035/147623681-d5a50130-f0b2-4c38-b998-fa50c46698ea.png)
 
