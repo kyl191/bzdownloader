@@ -71,6 +71,12 @@ class BzDownloader:
         return self.config["auth"]["email"]
 
     @property
+    def bzsanity(self):
+        hex_email = bytes.hex(self.email.encode("ascii"))
+        hex_email_hash = hashlib.sha1(hex_email.encode("ascii")).hexdigest()
+        return "".join(map(lambda i: hex_email_hash[i], [1, 3, 5, 7]))
+
+    @property
     def cluster(self):
         return self.config["session"]["cluster"]
 
@@ -216,8 +222,7 @@ class BzDownloader:
             "twofactorverifycode": "none",
             "hexsecondfactor": "none",
             "bz_auth_token": "none",
-            # ???
-            "bzsanity": "7e33",
+            "bzsanity": self.bzsanity,
         }
 
         r = requests.post(url, headers=headers, data=payload)
@@ -369,7 +374,7 @@ class BzDownloader:
             "hexemailaddr": bytes.hex(self.email.encode("ascii")),
             "hexpassword": bytes.hex("null".encode("ascii")),
             "bz_v5_auth_token": self.auth_token,
-            "bzsanity": "7e33",  # ??? No clue what this value is
+            "bzsanity": self.bzsanity,
             "hguid": restore.hguid,
             "rid": restore.rid,
         }
